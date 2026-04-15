@@ -185,13 +185,12 @@
     .wrapper-resume {
       display: grid;
       grid-template-columns: 280px 1fr;
-      aspect-ratio: 1/1.414;
       max-width: 1200px;
       width: 100%;
+      min-height: 842px;
       background: white;
       box-shadow: var(--shadow);
       border-radius: var(--radius);
-      overflow: hidden;
       margin: 0 auto;
     }
 
@@ -311,11 +310,10 @@
     .wrapper-project {
       width: calc(210mm - 8mm);
       max-width: 100%;
-      aspect-ratio: 210 / 297;
+      min-height: 1123px;
       background: #fff;
       box-shadow: 0 3px 10px rgba(15, 23, 42, 0.05);
       border-radius: var(--radius);
-      overflow: hidden;
       box-sizing: border-box;
       margin: 0 auto;
     }
@@ -323,8 +321,6 @@
     .content-project-total {
       padding: 6mm 5mm;
       box-sizing: border-box;
-      height: 100%;
-      overflow: hidden;
     }
 
     .header-project-total {
