@@ -538,6 +538,17 @@
       max-width: 100%;
     }
 
+    .llama-image-wrapper-total {
+      width: 300px;
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+
+    .llama-image-wrapper-total .project-image-total {
+      max-height: 290px;
+      max-width: 100%;
+    }
+
     .thesis-image-wrapper-total {
       width: 300px;
       margin-right: 0px;
@@ -564,7 +575,7 @@
         flex-direction: column;
       }
 
-      .ecg-image-wrapper-total, .rail-image-wrapper-total, .lte-image-wrapper-total, .garbage-image-wrapper-total, .translation-image-wrapper-total, .thesis-image-wrapper-total {
+      .ecg-image-wrapper-total, .rail-image-wrapper-total, .lte-image-wrapper-total, .garbage-image-wrapper-total, .translation-image-wrapper-total, .llama-image-wrapper-total, .thesis-image-wrapper-total {
         width: 100%;
       }
 
@@ -758,7 +769,7 @@
               <ul>
                 <li class="meta-resume-total">苏州大学轨道交通学院课外学术科研基金（主持）</li>
                 <li class="meta-resume-total"><strong>软件著作权：</strong>基于对比学习的心律失常起源定位系统</li>
-                <li class="meta-resume-total"><strong>发明专利（申请中）：</strong>基于多门混合专家模型的疲劳诊断声发射信号与裂纹长度预测双任务统一学习方法</li>
+                <li class="meta-resume-total"><strong>发明专利（受理中）：</strong>基于多门混合专家模型的疲劳诊断声发射信号与裂纹长度预测双任务统一学习方法</li>
               </ul>
             </li>
           </ul>
@@ -1015,6 +1026,41 @@
           <div class="project-total">
             <div class="project-with-image-total">
               <div class="project-content-total">
+                <h3>基于 llama.cpp 的本地大模型 LoRA 微调与加速部署</h3>
+                <div class="role-total">时间：2026.05 · 角色：开发者</div>
+
+                <p>在本地完成 Qwen2.5-7B-Instruct 的 LoRA 微调、量化与推理部署，探索让大模型在 PC / 手机端可运行的轻量化方案。</p>
+
+                <p><strong>我的职责与贡献：</strong></p>
+                <ul>
+                  <li>源码编译：从 GitHub 获取 llama.cpp 源码，使用 CMake 加载并编译，最终成功生成 llama-cli.exe。</li>
+                  <li>微调训练：使用 datasets 拉取 Alpaca 数据集；下载 Qwen2.5-7B-Instruct 基座模型，编写 LoRA 微调脚本，并在服务器进行训练。</li>
+                  <li>模型量化：将基座模型与 LoRA adapter 转换为 GGUF，并将基座模型量化为 Q4_K_M 版本。</li>
+                </ul>
+
+                <div class="tech-list-total">
+                  <div class="tech-total"><strong>技术栈：</strong></div>
+                  <div class="tech-total">llama.cpp</div>
+                  <div class="tech-total">CMake</div>
+                  <div class="tech-total">LoRA</div>
+                  <div class="tech-total">Hugging Face</div>
+                  <div class="tech-total">量化</div>
+                  <div class="pill-total"><strong>成果：</strong></div>
+                  <div class="pill-total">LoRA微调的Qwen2.5一键式推理脚本。</div>
+                </div>
+
+                <div class="metrics-total">指标：完成从编译、训练、量化到本地推理的完整流程，输出可直接运行的模型与自动化脚本。</div>
+              </div>
+              <div class="llama-image-wrapper-total">
+                <img src="llama.png" alt="llama.cpp本地大模型部署" class="project-image-total">
+                <div class="image-caption-total">llama.cpp 本地大模型推理界面</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-total">
+            <div class="project-with-image-total">
+              <div class="project-content-total">
                 <h3>Translation - 论文 PDF 全文翻译工具</h3>
                 <div class="role-total">时间：2026.03 · 角色：开发者</div>
 
@@ -1049,33 +1095,37 @@
           </div>
 
           <div class="project-total">
-            <h3>基于 LangChain 的智能代码审查助手</h3>
-            <div class="role-total">时间：2026.01 · 角色：开发者</div>
+            <div class="project-with-image-total">
+              <div class="project-content-total">
+                <h3>基于 LangChain 的智能代码审查助手</h3>
+                <div class="role-total">时间：2026.01 · 角色：开发者</div>
 
-            <p>构建一个可以自动分析代码质量、发现潜在问题并提供改进建议的智能代码审查Agent。</p>
+                <p>构建一个可以自动分析代码质量、发现潜在问题并提供改进建议的智能代码审查Agent。</p>
 
-            <p><strong>我的职责与贡献：</strong></p>
-            <ul>
-              <li>本地大模型部署：相较于使用API调用，选择借助Ollama在本地部署了Qwen2.5:7b-instruct-q4_K_M模型，并实现了代码审查Agent的本地化运行。</li>
-              <li>Agent开发：通过LangChain框架，实现了代码审查Agent的开发，并实现了多种审查策略。</li>
-            </ul>
+                <p><strong>我的职责与贡献：</strong></p>
+                <ul>
+                  <li>本地大模型部署：相较于使用API调用，选择借助Ollama在本地部署了Qwen2.5:7b-instruct-q4_K_M模型，并实现了代码审查Agent的本地化运行。</li>
+                  <li>Agent开发：通过LangChain框架，实现了代码审查Agent的开发，并实现了多种审查策略。</li>
+                </ul>
 
-            <div class="tech-list-total">
-              <div class="tech-total"><strong>技术栈：</strong></div>
-              <div class="tech-total">Python</div>
-              <div class="tech-total">LangChain</div>
-              <div class="tech-total">Ollama</div>
-              <div class="tech-total">LLM</div>
-              <div class="tech-total">Agent</div>
-              <div class="tech-total">Prompt Engineering</div>
+                <div class="tech-list-total">
+                  <div class="tech-total"><strong>技术栈：</strong></div>
+                  <div class="tech-total">Python</div>
+                  <div class="tech-total">LangChain</div>
+                  <div class="tech-total">Ollama</div>
+                  <div class="tech-total">LLM</div>
+                  <div class="tech-total">Agent</div>
+                  <div class="tech-total">Prompt Engineering</div>
+                </div>
+
+                <div class="row-total">
+                  <div class="pill-total"><strong>成果：</strong></div>
+                  <div class="pill-total">GitHub 开源项目: https://github.com/BoW-R/Code-Review-Agent。</div>
+                </div>
+
+                <div class="metrics-total">指标：通过命令行调用程序，输入需要审查的代码文件（夹）路径，即可自动分析代码质量、发现潜在问题并提供Markdown格式的报告。</div>
+              </div>
             </div>
-
-            <div class="row-total">
-              <div class="pill-total"><strong>成果：</strong></div>
-              <div class="pill-total">GitHub 开源项目: https://github.com/BoW-R/Code-Review-Agent。</div>
-            </div>
-
-            <div class="metrics-total">指标：通过命令行调用程序，输入需要审查的代码文件（夹）路径，即可自动分析代码质量、发现潜在问题并提供Markdown格式的报告。</div>
           </div>
 
           <div class="project-total">
